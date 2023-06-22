@@ -20,7 +20,7 @@ body::-webkit-scrollbar{
     margin: 3% auto;
     width: 20vw;
     height: 90vh;
-    background-color: #FFD966;
+    background-color: #E4DCCF;
     display: grid;
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(15,1fr);
@@ -36,21 +36,22 @@ body::-webkit-scrollbar{
  text-align: end;
 }
 .red{
-  background-color:red;
+  background-color:#F24C3D;
   color: #EEEEEE;
 }
 .blue{
-  background-color: blue;
+  background-color: #0079FF;
   color: #EEEEEE;
 }
 
 .white{
-  background-color: aliceblue;
+  background-color: #F9FBE7;
 }
 
 .yellowToken{
-  width: 60%;
-  height: 60%;
+  display: inline-block;
+  width: 50%;
+  height: 50%;
   background-image: url("./assets/coinyellow.png");
   background-size: contain;
  background-position: center;
@@ -58,8 +59,10 @@ body::-webkit-scrollbar{
  
 }
 .blueToken{
-  width: 60%;
-  height: 60%;
+  display: inline-block;
+  border-radius: 50%;
+  width: 50%;
+  height: 50%;
   background-image: url("./assets/coinred.png");
   background-size: contain;
  background-position: center;

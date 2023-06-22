@@ -9,16 +9,16 @@ const Square = ({ num, color }) => {
       {num}
 
       {redObject[red.rt1] === num && (
-         <div className="yellowToken" onClick={()=>moveRed(random,"rt1")}>r1</div>
+         <div className="yellowToken" onClick={()=>moveRed(random,"rt1")}></div>
       )}
       {redObject[red.rt2] === num && (
-         <div className="yellowToken" onClick={()=>moveRed(random,"rt2")}>r2</div>
+         <div className="yellowToken" onClick={()=>moveRed(random,"rt2")}></div>
       )}
       {blueObject[blue.bt1] === num && (
-         <div className="blueToken" onClick={()=>moveBlue(random,"bt1")}>b1</div>
+         <div className="blueToken" onClick={()=>moveBlue(random,"bt1")}></div>
       )}
       {blueObject[blue.bt2] === num && (
-         <div className="blueToken" onClick={()=>moveBlue(random,"bt2")}>b2</div>
+         <div className="blueToken" onClick={()=>moveBlue(random,"bt2")}></div>
       )}
     </div>
   );
