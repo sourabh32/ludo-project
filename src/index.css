@@ -36,7 +36,7 @@ body::-webkit-scrollbar{
  text-align: end;
 }
 .red{
-  background-color: brown;
+  background-color:red;
   color: #EEEEEE;
 }
 .blue{
