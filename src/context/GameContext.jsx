@@ -27,14 +27,15 @@ const GameProvider = ({ children }) => {
 
 
   const moveRed = (random,token) => {
-    if(redTurn){
+    
+    if(redTurn ){
 
     
-    if (token === "rt1") {
+    if (token === "rt1" && red.rt1+random <= 41) {
       setRed((prev) => ({ ...prev, rt1: prev.rt1 + random }));
       setRedTurn(false);
   
-    } else if (token === "rt2") {
+    } else if (token === "rt2" && red.rt2+random <= 41) {
       setRed((prev) => ({ ...prev, rt2: prev.rt2 + random }));
       setRedTurn(false);
       
@@ -43,13 +44,14 @@ const GameProvider = ({ children }) => {
 };
 
 const moveBlue = (random,token) => {
+
   if(!redTurn){
 
-    if (token === "bt1") {
+    if (token === "bt1" && blue.bt1+random <= 41) {
       setBlue((prev) => ({ ...prev, bt1: prev.bt1 + random }));
       setRedTurn(true);
       
-    } else if (token === "bt2") {
+    } else if (token === "bt2" && blue.bt2+random <=41) {
       setBlue((prev) => ({ ...prev, bt2: prev.bt2 + random }));
       setRedTurn(true);
       
@@ -63,7 +65,7 @@ const moveBlue = (random,token) => {
     console.log(redTurn)
   }, [random]);
 
-  const value = { generateRandom, red, blue,random,moveRed,moveBlue };
+  const value = { generateRandom, red, blue,random,moveRed,moveBlue,redTurn };
   return <gameContext.Provider value={value}>{children}</gameContext.Provider>;
 };
 

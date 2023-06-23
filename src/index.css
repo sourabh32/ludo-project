@@ -47,6 +47,10 @@ body::-webkit-scrollbar{
 .white{
   background-color: #F9FBE7;
 }
+#enlarge{
+  width: 70%;
+  height: 70%;
+}
 
 .yellowToken{
   display: inline-block;
