@@ -5,14 +5,15 @@ import { gameContext } from "./context/GameContext"
 
 function App() {
 
-  const {generateRandom} = useContext(gameContext)
+  const {generateRandom,random} = useContext(gameContext)
   
   
   return (
-    <>
+    <div className="container">
+     <button onClick={generateRandom}>{random}</button>
   <Board />
-   <button onClick={generateRandom}>generate</button>
-    </>
+  
+    </div>
   )
 }
 

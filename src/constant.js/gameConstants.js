@@ -5,7 +5,7 @@ export const blueHome = [57,58,59,60,11]
 
 const red = [56, 55, 54, 53, 49, 45, 41, 37, 33, 29, 25, 21, 17, 13, 9, 5, 6, 7, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 51, 47, 43, 39, 35, 31, 27, 23, 19, 15, 11];
 
-const blue =[5,6,7,8,12,16,20,24,28,32,36,40,44,48,52,56, 55, 54, 53, 49, 45, 41, 37, 33, 29, 25, 21, 17, 13, 9,10,14,18,22,26,30,34,38,42,46,50]
+const blue =[5,9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 54, 55, 56, 52, 48, 44, 40, 36, 32, 28, 24, 20, 16, 12, 8, 7, 6,10,14,18,22,26,30,34,38,42,46,50]
  export const redObject = {0:60};
  export const blueObject = {0:1};
 
@@ -18,3 +18,5 @@ const generatePath = (arr,obj) =>{
 generatePath(red,redObject)
 generatePath(blue,blueObject)
 
+console.log(redObject)
+console.log(blueObject)
