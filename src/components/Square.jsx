@@ -6,7 +6,7 @@ const Square = ({ num, color }) => {
 
   return (
     <div className={`square ${color}`}>
-      {num}
+     <p>{num}</p> 
 
       {redObject[red.rt1] === num && (
          <div id={`${redTurn && "enlarge"}`}  className="yellowToken" onClick={()=>moveRed(random,"rt1")}></div>

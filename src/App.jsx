@@ -1,19 +1,20 @@
 import Board from "./components/Board"
 import { useContext } from "react"
 import { gameContext } from "./context/GameContext"
-
+import { Toaster } from "react-hot-toast"
+import Button from "./components/Button"
 
 function App() {
 
-  const {generateRandom,random} = useContext(gameContext)
+  
   
   
   return (
-    <div className="container">
-     <button onClick={generateRandom}>{random}</button>
-  <Board />
-  
-    </div>
+    <>
+      <Toaster />
+       <Board />
+       <Button />
+    </>
   )
 }
 
