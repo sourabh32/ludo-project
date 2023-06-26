@@ -1,12 +1,15 @@
 import React,{useContext} from 'react'
 import { gameContext } from '../context/GameContext'
+import {motion} from "framer-motion"
 const Button = ({val,sty}) => {
     const {generateRandom,random,redTurn} = useContext(gameContext)
     
   return (
-    <div className='btn-container'>
+    <motion.div  initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }} className='btn-container'>
              <button disabled={val} className={`button ${sty}`} onClick={generateRandom}>{random}</button>
-    </div>
+    </motion.div>
   )
 }
 

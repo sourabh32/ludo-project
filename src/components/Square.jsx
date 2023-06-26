@@ -1,26 +1,33 @@
 import React, { useContext } from "react";
 import { redObject, blueObject } from "../constant.js/gameConstants";
 import { gameContext } from "../context/GameContext";
+import {motion} from "framer-motion"
+import Token from "./Token";
 const Square = ({ num, color }) => {
   const {red,blue,random,moveBlue,moveRed,redTurn} = useContext(gameContext)
 
   return (
-    <div className={`square ${color}`}>
+    <motion.div  initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }} className={`square ${color}`}>
      <p>{num}</p> 
 
       {redObject[red.rt1] === num && (
-         <div id={`${redTurn && "enlarge"}`}  className="yellowToken" onClick={()=>moveRed(random,"rt1")}></div>
+         <Token color={"yellowToken"} redTurn={redTurn} move={()=>moveRed(random,"rt1")}  />
+         
       )}
       {redObject[red.rt2] === num && (
-         <div id={`${redTurn && "enlarge"}`}   className="yellowToken" onClick={()=>moveRed(random,"rt2")}></div>
+         <Token color={"yellowToken"} redTurn={redTurn} move={()=>moveRed(random,"rt2")}  />
+        
       )}
       {blueObject[blue.bt1] === num && (
-         <div id={`${!redTurn && "enlarge"}`}    className="blueToken" onClick={()=>moveBlue(random,"bt1")}></div>
+         <Token color={"blueToken"} redTurn={!redTurn} move={()=>moveBlue(random,"bt1")}  />
+       
       )}
       {blueObject[blue.bt2] === num && (
-         <div id={`${!redTurn && "enlarge"}`}    className="blueToken" onClick={()=>moveBlue(random,"bt2")}></div>
+        <Token color={"blueToken"} redTurn={!redTurn} move={()=>moveBlue(random,"bt2")}  />
       )}
-    </div>
+    </motion.div>
   );
 };
 
