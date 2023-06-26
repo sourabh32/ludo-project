@@ -6,15 +6,17 @@ import Button from "./components/Button"
 
 function App() {
 
-  
+  const {redTurn} = useContext(gameContext)
   
   
   return (
-    <>
+    <div className="container">
       <Toaster />
+      <Button val={redTurn} sty={"bluebtn"} />
        <Board />
-       <Button />
-    </>
+       <Button val={!redTurn} sty={"yellowbtn"} />
+       
+    </div>
   )
 }
 

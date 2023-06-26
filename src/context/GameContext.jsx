@@ -19,7 +19,7 @@ export const gameContext = createContext({
 
 const GameProvider = ({ children }) => {
   const [red, setRed] = useState({ rt1: 0, rt2: 0 });
-  const [blue, setBlue] = useState({ bt1: 35, bt2: 34 });
+  const [blue, setBlue] = useState({ bt1: 0, bt2: 0 });
   const [redTurn, setRedTurn] = useState(true);
   const [random,setRandom] = useState(0)
 
