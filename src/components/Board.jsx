@@ -1,6 +1,7 @@
 import React from 'react'
 import Square from './Square'
 import { redHome,blueHome,winPath } from '../constant.js/gameConstants'
+import {motion} from "framer-motion"
 const Board = () => {
     let squares = []
     for(let i = 1;i<=60;i++){
@@ -19,7 +20,11 @@ const Board = () => {
         
     }
   return (
-    <div className='board'>{squares}</div>
+    <motion.div
+    initial={{ y:-300,opacity:0.5 }}
+    animate={{ y:0,opacity:1  }}
+    transition={{ duration: 3,delay:0.2 }} 
+    className='board'>{squares}</motion.div>
   )
 }
 

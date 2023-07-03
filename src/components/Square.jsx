@@ -7,9 +7,7 @@ const Square = ({ num, color }) => {
   const {red,blue,random,moveBlue,moveRed,redTurn} = useContext(gameContext)
 
   return (
-    <motion.div  initial={{ y:-300,opacity:0.5 }}
-    animate={{ y:0,opacity:1  }}
-    transition={{ duration: 3,delay:0.2 }} className={`square ${color}`}>
+    <div  className={`square ${color}`}>
      <p>{num}</p> 
 
       {redObject[red.rt1] === num && (
@@ -27,7 +25,7 @@ const Square = ({ num, color }) => {
       {blueObject[blue.bt2] === num && (
         <Token color={"blueToken"} redTurn={!redTurn} move={()=>moveBlue(random,"bt2")}  />
       )}
-    </motion.div>
+    </div>
   );
 };
 
